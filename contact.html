@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Divrag Interior</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=2"><link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+    <header id="header" class="scrolled"><div class="container header-container"><a href="index.html" class="logo"><svg class="logo-icon" width="38" height="38" viewBox="0 0 40 40" fill="none"><path d="M20 2L36 11V29L20 38L4 29V11L20 2Z" stroke="currentColor" stroke-width="1.5"/><path d="M20 8L30 14V26L20 32L10 26V14L20 8Z" stroke="currentColor" stroke-width="1.2"/><path d="M20 14L25 17.5V24.5L20 28L15 24.5V17.5L20 14Z" stroke="currentColor" stroke-width="1"/></svg><span class="logo-text">divrag interior</span></a><nav class="main-nav"><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="blog.html">Blog</a></li><li class="has-dropdown"><a href="#">Pages <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="team.html">Our Team</a></li><li><a href="faq.html">FAQ</a></li><li><a href="testimonials.html">Testimonials</a></li></ul></li><li><a href="contact.html" class="active">Contact Us</a></li></ul></nav><div class="header-right"><a href="contact.html" class="btn btn-accent btn-sm">Get In Touch <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div></div></header>
+    <div class="mobile-nav-overlay" id="mobileNav"><div class="mobile-nav-content"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div></div>
+
+    <section class="page-banner"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1920" alt="Contact"><div class="banner-overlay"></div><div class="container"><div class="banner-content"><h1>Contact Us</h1><div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Contact Us</span></div></div></div></section>
+
+    <main>
+        <section class="section-pad">
+            <div class="container">
+                <div class="contact-form-section">
+                    <div class="contact-info-block" data-anim="fade-right">
+                        <span class="section-label"><span class="label-line"></span> Get In Touch</span>
+                        <h3>Let's start a conversation about your dream space</h3>
+                        <p class="body-text">Whether you have a question about our services, want to discuss a project, or simply need some design advice, we're here to help.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-det-item">
+                                <div class="icon-ring"><i class="fas fa-map-marker-alt"></i></div>
+                                <div><strong>Our Office</strong><p style="color:var(--text-light);margin-top:4px">Generala Zietka Jerzego 54, Myslowice 41-412</p></div>
+                            </div>
+                            <div class="contact-det-item">
+                                <div class="icon-ring"><i class="fas fa-phone-alt"></i></div>
+                                <div><strong>Phone Number</strong><p style="color:var(--text-light);margin-top:4px">+1 (213) 465 789</p></div>
+                            </div>
+                            <div class="contact-det-item">
+                                <div class="icon-ring"><i class="fas fa-envelope"></i></div>
+                                <div><strong>Email Address</strong><p style="color:var(--text-light);margin-top:4px">info@domain.com</p></div>
+                            </div>
+                            <div class="contact-det-item">
+                                <div class="icon-ring"><i class="fas fa-clock"></i></div>
+                                <div><strong>Working Hours</strong><p style="color:var(--text-light);margin-top:4px">Mon – Fri: 9:00 AM – 6:00 PM</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-card" data-anim="fade-left">
+                        <h3>Send Us a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname" placeholder="Your first name" required></div>
+                                <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" placeholder="Your last name" required></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="Your email address" required></div>
+                                <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" placeholder="Your phone number"></div>
+                            </div>
+                            <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" placeholder="How can we help?"></div>
+                            <div class="form-group"><label for="message">Message</label><textarea id="message" placeholder="Tell us about your project..." rows="5" required></textarea></div>
+                            <button type="submit" class="btn btn-accent" style="width:100%;justify-content:center">Send Message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                        </form>
+                        <div id="formFeedback" style="margin-top:16px;text-align:center;font-weight:600;display:none"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map -->
+        <section style="height:400px;filter:grayscale(1) contrast(1.1);opacity:.8">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2554.8!2d19.16!3d50.22!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDEzJzEyLjAiTiAxOcKwMDknMzYuMCJF!5e0!3m2!1sen!2spl!4v1700000000000!5m2!1sen!2spl" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy"></iframe>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-top"><a href="index.html" class="logo footer-logo"><svg class="logo-icon" width="38" height="38" viewBox="0 0 40 40" fill="none"><path d="M20 2L36 11V29L20 38L4 29V11L20 2Z" stroke="currentColor" stroke-width="1.5"/><path d="M20 8L30 14V26L20 32L10 26V14L20 8Z" stroke="currentColor" stroke-width="1.2"/><path d="M20 14L25 17.5V24.5L20 28L15 24.5V17.5L20 14Z" stroke="currentColor" stroke-width="1"/></svg><span class="logo-text">divrag interior</span></a><div class="follow-socials"><span>Follow Our Socials</span><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-dribbble"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div></div><div class="footer-bottom"><p>Copyright &copy; 2024 All Rights Reserved.</p></div></div></footer>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const fb = document.getElementById('formFeedback');
+            fb.style.display = 'block';
+            fb.style.color = '#7A8B7C';
+            fb.textContent = 'Thank you! Your message has been sent successfully.';
+            this.reset();
+            setTimeout(() => { fb.style.display = 'none'; }, 4000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects — Divrag Interior</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=2"><link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+    <header id="header" class="scrolled"><div class="container header-container"><a href="index.html" class="logo"><svg class="logo-icon" width="38" height="38" viewBox="0 0 40 40" fill="none"><path d="M20 2L36 11V29L20 38L4 29V11L20 2Z" stroke="currentColor" stroke-width="1.5"/><path d="M20 8L30 14V26L20 32L10 26V14L20 8Z" stroke="currentColor" stroke-width="1.2"/><path d="M20 14L25 17.5V24.5L20 28L15 24.5V17.5L20 14Z" stroke="currentColor" stroke-width="1"/></svg><span class="logo-text">divrag interior</span></a><nav class="main-nav"><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html" class="active">Projects</a></li><li><a href="blog.html">Blog</a></li><li class="has-dropdown"><a href="#">Pages <i class="fas fa-chevron-down"></i></a><ul class="dropdown"><li><a href="team.html">Our Team</a></li><li><a href="faq.html">FAQ</a></li><li><a href="testimonials.html">Testimonials</a></li></ul></li><li><a href="contact.html">Contact Us</a></li></ul></nav><div class="header-right"><a href="contact.html" class="btn btn-accent btn-sm">Get In Touch <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div></div></header>
+    <div class="mobile-nav-overlay" id="mobileNav"><div class="mobile-nav-content"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div></div>
+
+    <section class="page-banner"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1920" alt="Projects"><div class="banner-overlay"></div><div class="container"><div class="banner-content"><h1>Our Projects</h1><div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Projects</span></div></div></div></section>
+
+    <main>
+        <section class="projects section-pad">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="architecture">Architecture</button>
+                    <button class="filter-btn" data-filter="interior">Interior</button>
+                    <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+                    <button class="filter-btn" data-filter="furniture">Furniture</button>
+                    <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-cat="interior" data-anim="fade-up"><div class="project-img-wrap"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=800" alt="Project"></div><div class="project-info-bar"><div><span class="project-cat">Interior</span><h4>Urban Retreat: Modern Design Meets Comfort</h4></div><a href="#" class="arrow-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div></div>
+                    <div class="project-card" data-cat="architecture" data-anim="fade-up" data-delay="150"><div class="project-img-wrap"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Project"></div><div class="project-info-bar"><div><span class="project-cat">Architecture</span><h4>Luxurious Loft: Industrial Chic for Living</h4></div><a href="#" class="arrow-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div></div>
+                    <div class="project-card" data-cat="bedroom" data-anim="fade-up"><div class="project-img-wrap"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=800" alt="Project"></div><div class="project-info-bar"><div><span class="project-cat">Bedroom</span><h4>Coastal Vibes: Serene Bedroom Retreats</h4></div><a href="#" class="arrow-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div></div>
+                    <div class="project-card" data-cat="furniture" data-anim="fade-up" data-delay="150"><div class="project-img-wrap"><img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=800" alt="Project"></div><div class="project-info-bar"><div><span class="project-cat">Furniture</span><h4>Minimalist Haven: Clean Lines & Calm Tones</h4></div><a href="#" class="arrow-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div></div>
+                    <div class="project-card" data-cat="kitchen" data-anim="fade-up"><div class="project-img-wrap"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=800" alt="Project"></div><div class="project-info-bar"><div><span class="project-cat">Kitchen</span><h4>Gourmet Kitchen: Where Style Meets Function</h4></div><a href="#" class="arrow-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div></div>
+                    <div class="project-card" data-cat="architecture" data-anim="fade-up" data-delay="150"><div class="project-img-wrap"><img src="https://images.unsplash.com/photo-1600566753086-00f18f6b0d89?auto=format&fit=crop&q=80&w=800" alt="Project"></div><div class="project-info-bar"><div><span class="project-cat">Architecture</span><h4>Grand Villa: Timeless Architectural Beauty</h4></div><a href="#" class="arrow-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-top"><a href="index.html" class="logo footer-logo"><svg class="logo-icon" width="38" height="38" viewBox="0 0 40 40" fill="none"><path d="M20 2L36 11V29L20 38L4 29V11L20 2Z" stroke="currentColor" stroke-width="1.5"/><path d="M20 8L30 14V26L20 32L10 26V14L20 8Z" stroke="currentColor" stroke-width="1.2"/><path d="M20 14L25 17.5V24.5L20 28L15 24.5V17.5L20 14Z" stroke="currentColor" stroke-width="1"/></svg><span class="logo-text">divrag interior</span></a><div class="follow-socials"><span>Follow Our Socials</span><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-dribbble"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div></div><div class="footer-bottom"><p>Copyright &copy; 2024 All Rights Reserved.</p></div></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divrag Interior — Architecture & Interior Design Agency</title>
+    <meta name="description" content="Divrag Interior is a premier architecture and interior design agency crafting luxury dream spaces with elegance and precision.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M50 5 L93 30 V70 L50 95 L7 70 V30 Z" />
+                    <path d="M22 38 L50 54 L78 38" />
+                    <path d="M22 52 L50 68 L78 52" />
+                    <path d="M22 66 L50 82 L78 66" />
+                </svg>
+                <span class="logo-text">divrag interior</span>
+            </a>
+
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home <i class="fas fa-chevron-down"></i></a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">Pages <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="testimonials.html">Testimonials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="contact.html" class="btn btn-accent btn-sm">Get In Touch <i class="fas fa-arrow-right"></i></a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-content">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <!-- ========== HERO ========== -->
+        <section class="hero" id="hero">
+            <div class="hero-bg-slider">
+                <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=1920')"></div>
+                <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1920')"></div>
+                <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1920')"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-tag reveal-up">
+                        <svg width="45" height="12" viewBox="0 0 45 12" fill="none" style="margin-right: 12px; display: inline-block; vertical-align: middle;">
+                            <line x1="0" y1="6" x2="38" y2="6" stroke="white" stroke-width="1.5"/>
+                            <path d="M38 6L41 3L45 6L41 9L38 6Z" fill="white"/>
+                        </svg>
+                        Inspired Interiors
+                    </div>
+                    <h1 style="font-weight:700"><span class="text-split-ani">Designing your dream spaces, one room at a time</span></h1>
+                    <p class="reveal-up stagger-1">We specialize in creating personalized, functional, and stylish interiors that reflect your unique vision.</p>
+                    <div class="hero-btns">
+                        <a href="services.html" class="btn btn-accent reveal-up stagger-2">Explore More <i class="fas fa-arrow-right"></i></a>
+                        <a href="projects.html" class="btn btn-white reveal-up stagger-3">View Projects <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Hero slider dots -->
+            <div class="hero-dots">
+                <button class="dot active" data-slide="0"></button>
+                <button class="dot" data-slide="1"></button>
+                <button class="dot" data-slide="2"></button>
+            </div>
+        </section>
+
+        <!-- ========== ABOUT ========== -->
+        <section class="about section-pad" id="about">
+            <div class="dot-pattern dot-pattern-left"></div>
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-images" data-anim="fade-right">
+                        <div class="img-collage">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800" alt="Modern interior living room" class="collage-main">
+                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=600" alt="Cozy interior space" class="collage-overlap">
+                            <div class="exp-badge">
+                                <span class="exp-num">15+</span>
+                                <span class="exp-label">Years Of<br>Experience</span>
+                            </div>
+                        </div>
+                        <!-- Vertical text -->
+                        <div class="vertical-text">
+                            <span>Positive Feedback</span>
+                            <div class="percent-badge">95%</div>
+                        </div>
+                    </div>
+
+                    <div class="about-text" data-anim="fade-left">
+                        <span class="section-label"><span class="label-line"></span> About Us</span>
+                        <h2>Our passion for design, your <span class="muted">vision realized</span></h2>
+                        <p class="body-text">Our dedicated team of designers works closely with you to understand your vision and bring it to life with thoughtful attention to detail. Whether it's transforming a single room or an entire home.</p>
+
+                        <div class="check-list">
+                            <div class="check-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#7A8B7C"/><path d="M8 12l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>Creative expertise</span>
+                            </div>
+                            <div class="check-item">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#7A8B7C"/><path d="M8 12l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>Client-centered approach</span>
+                            </div>
+                        </div>
+
+                        <div class="about-bottom">
+                            <div class="about-bottom-left">
+                                <a href="about.html" class="btn btn-dark">Read More
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                            <div class="about-bottom-right">
+                                <div class="phone-block">
+                                    <div class="icon-ring"><i class="fas fa-phone-alt"></i></div>
+                                    <div>
+                                        <small>Need Any Help?</small>
+                                        <strong>+(1) 235 800 999</strong>
+                                    </div>
+                                </div>
+                                <div class="ceo-block">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=80&h=80" alt="Leslie Alexander" class="ceo-avatar">
+                                    <div>
+                                        <strong>Leslie Alexander</strong>
+                                        <small class="accent-text">Co Founder</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== WHY CHOOSE US ========== -->
+        <section class="why-us section-pad bg-offwhite" id="why-us">
+            <div class="container">
+                <div class="why-grid">
+                    <div class="why-content" data-anim="fade-right">
+                        <span class="section-label"><span class="label-line"></span> Why Choose Us</span>
+                        <h2>A behind the scenes look at <span class="muted">our agency</span></h2>
+                        <p class="body-text">From concept to completion, discover how we bring your vision to life with innovation, collaboration, and expert craftsmanship.</p>
+
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7A8B7C" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg>
+                                </div>
+                                <div>
+                                    <h4>Tailored Design Solutions</h4>
+                                    <p>We provide personalized interior design services that reflect your unique vision and lifestyle.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7A8B7C" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                                </div>
+                                <div>
+                                    <h4>Seamless Project Management</h4>
+                                    <p>We handle the entire design process, from concept to completion, with flawless execution.</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7A8B7C" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
+                                <div>
+                                    <h4>Client-Centered Collaboration</h4>
+                                    <p>Your input is valued throughout the entire process, ensuring your vision is fully realized.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="why-images" data-anim="fade-left">
+                        <div class="why-img-grid">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=500" alt="Interior 1" class="wimg-1">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18f6b0d89?auto=format&fit=crop&q=80&w=500" alt="Interior 2" class="wimg-2">
+                            <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&q=80&w=500" alt="Interior 3" class="wimg-3">
+                            <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=500" alt="Interior 4" class="wimg-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SERVICES ========== -->
+        <section class="services section-pad" id="services">
+            <div class="container">
+                <div class="section-header-flex">
+                    <div>
+                        <span class="section-label"><span class="label-line"></span> Our Services</span>
+                        <h2>Innovative design services for <span class="muted">every need</span></h2>
+                    </div>
+                    <p class="body-text section-desc">We offer a range of bespoke interior design services tailored to your unique needs. From concept development to final installation.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card" data-anim="fade-up">
+                        <div class="service-card-img">
+                            <img src="https://images.unsplash.com/photo-1616137422495-1e9e47e217c2?auto=format&fit=crop&q=80&w=600" alt="Residential Interior">
+                            <a href="services.html" class="float-arrow">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                            </a>
+                        </div>
+                        <div class="service-card-body">
+                            <h3>Residential Interior Design</h3>
+                            <p>Transform your home into a personalized sanctuary with our tailored design solutions.</p>
+                        </div>
+                    </div>
+                    <div class="service-card" data-anim="fade-up" data-delay="150">
+                        <div class="service-card-img">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600" alt="Commercial Interior">
+                            <a href="services.html" class="float-arrow">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                            </a>
+                        </div>
+                        <div class="service-card-body">
+                            <h3>Commercial Interior Design</h3>
+                            <p>Create inspiring workspaces that enhance productivity and reflect your brand identity.</p>
+                        </div>
+                    </div>
+                    <div class="service-card" data-anim="fade-up" data-delay="300">
+                        <div class="service-card-img">
+                            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=600" alt="Furniture Selection">
+                            <a href="services.html" class="float-arrow">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                            </a>
+                        </div>
+                        <div class="service-card-body">
+                            <h3>Furniture And Decor Selection</h3>
+                            <p>Curated furniture and decor pieces that perfectly complement your interior vision.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="center mt-60">
+                    <a href="services.html" class="btn btn-dark">See All Services
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== VIDEO BANNER ========== -->
+        <section class="video-cta">
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=1920" alt="Interior Showroom">
+            <div class="video-overlay"></div>
+            <button class="play-circle" id="playBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><polygon points="9,6 19,12 9,18"/></svg>
+                <span>Play</span>
+            </button>
+        </section>
+
+        <!-- ========== PROJECTS ========== -->
+        <section class="projects section-pad" id="projects">
+            <div class="container">
+                <div class="section-header-flex">
+                    <div>
+                        <span class="section-label"><span class="label-line"></span> Latest Project</span>
+                        <h2>Creative projects that <span class="muted">define our style</span></h2>
+                    </div>
+                    <p class="body-text section-desc">Our portfolio showcases a diverse range of projects, from beautifully crafted residential spaces functional and stylish commercial interiors</p>
+                </div>
+
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="architecture">Architecture</button>
+                    <button class="filter-btn" data-filter="interior">Interior</button>
+                    <button class="filter-btn" data-filter="bedroom">Bedroom</button>
+                    <button class="filter-btn" data-filter="furniture">Furniture</button>
+                    <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card" data-cat="interior" data-anim="fade-up" data-cursor="View">
+                        <div class="project-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=800" alt="Urban Retreat">
+                        </div>
+                        <div class="project-info-bar">
+                            <div>
+                                <span class="project-cat">Interior</span>
+                                <h4>Urban Retreat: Modern Design Meets Comfort</h4>
+                            </div>
+                            <a href="projects.html" class="arrow-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-cat="architecture" data-anim="fade-up" data-delay="150" data-cursor="View">
+                        <div class="project-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Luxurious Loft">
+                        </div>
+                        <div class="project-info-bar">
+                            <div>
+                                <span class="project-cat">Architecture</span>
+                                <h4>Luxurious Loft: Industrial Chic for Living</h4>
+                            </div>
+                            <a href="projects.html" class="arrow-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-cat="bedroom" data-anim="fade-up" data-cursor="View">
+                        <div class="project-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=800" alt="Coastal Vibes">
+                        </div>
+                        <div class="project-info-bar">
+                            <div>
+                                <span class="project-cat">Bedroom</span>
+                                <h4>Coastal Vibes: Serene Bedroom Retreats</h4>
+                            </div>
+                            <a href="projects.html" class="arrow-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card" data-cat="furniture" data-anim="fade-up" data-delay="150" data-cursor="View">
+                        <div class="project-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=800" alt="Minimalist Haven">
+                        </div>
+                        <div class="project-info-bar">
+                            <div>
+                                <span class="project-cat">Furniture</span>
+                                <h4>Minimalist Haven: Clean Lines & Calm Tones</h4>
+                            </div>
+                            <a href="projects.html" class="arrow-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SKILLS ========== -->
+        <section class="skills section-pad bg-offwhite" id="skills">
+            <div class="arch-watermark"></div>
+            <div class="container">
+                <div class="skills-grid">
+                    <div class="skills-text" data-anim="fade-right">
+                        <span class="section-label"><span class="label-line"></span> Our Skills</span>
+                        <h2>Skills that shape your <span class="muted">dream home</span></h2>
+                        <p class="body-text">Our dedicated team of designers works closely with you to understand your vision and bring it to life with thoughtful attention to detail.</p>
+
+                        <div class="progress-bars">
+                            <div class="pbar" data-percent="95">
+                                <div class="pbar-top"><span>Space Planning And Layout</span><span class="pbar-pct">95%</span></div>
+                                <div class="pbar-track"><div class="pbar-fill"></div></div>
+                            </div>
+                            <div class="pbar" data-percent="85">
+                                <div class="pbar-top"><span>Project Challenges And Solutions</span><span class="pbar-pct">85%</span></div>
+                                <div class="pbar-track"><div class="pbar-fill"></div></div>
+                            </div>
+                            <div class="pbar" data-percent="75">
+                                <div class="pbar-top"><span>Sustainability And Eco-Friendly Features</span><span class="pbar-pct">75%</span></div>
+                                <div class="pbar-track"><div class="pbar-fill"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-imgs" data-anim="fade-left">
+                        <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=700" alt="Skill showcase" class="skills-big">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=400" alt="Detail" class="skills-sm skills-sm-1">
+                        <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&q=80&w=400" alt="Detail" class="skills-sm skills-sm-2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== HOW WE WORK (DARK) ========== -->
+        <section class="process section-pad" id="process">
+            <div class="container">
+                <div class="section-header-flex light">
+                    <div>
+                        <span class="section-label"><span class="label-line"></span> How We Work</span>
+                        <h2>From concept to <span class="muted-light">completion</span></h2>
+                    </div>
+                    <p class="body-text-light section-desc">Our comprehensive approach guides you through each phase of the design process, from initial brainstorming and conceptualization.</p>
+                </div>
+
+                <div class="process-steps">
+                    <div class="step" data-anim="fade-up">
+                        <div class="step-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2">
+                                <circle cx="24" cy="10" r="4"/><line x1="24" y1="14" x2="24" y2="28"/>
+                                <line x1="16" y1="20" x2="24" y2="14"/><line x1="32" y1="20" x2="24" y2="14"/>
+                                <circle cx="10" cy="24" r="2"/><circle cx="38" cy="24" r="2"/><circle cx="16" cy="34" r="2"/><circle cx="32" cy="34" r="2"/>
+                            </svg>
+                        </div>
+                        <h3><span class="step-num">01.</span> Initial Consultation</h3>
+                        <p>We start with a one-on meeting to understand your vision preferences and requirement.</p>
+                    </div>
+                    <div class="step" data-anim="fade-up" data-delay="100">
+                        <div class="step-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2">
+                                <rect x="16" y="8" width="16" height="32" rx="2"/><line x1="20" y1="36" x2="28" y2="36"/>
+                            </svg>
+                        </div>
+                        <h3><span class="step-num">02.</span> Design Planning</h3>
+                        <p>This involves selecting materials, and layouts, furnishings, as well as creating 3D renderings.</p>
+                    </div>
+                    <div class="step" data-anim="fade-up" data-delay="200">
+                        <div class="step-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2">
+                                <circle cx="24" cy="16" r="8"/><line x1="24" y1="16" x2="24" y2="10"/><line x1="24" y1="16" x2="28" y2="16"/>
+                                <line x1="24" y1="24" x2="24" y2="40"/>
+                                <line x1="18" y1="34" x2="30" y2="34"/>
+                            </svg>
+                        </div>
+                        <h3><span class="step-num">03.</span> Project Execution</h3>
+                        <p>With the design plans in this place, we manage and coordinate all aspects of the projects.</p>
+                    </div>
+                    <div class="step" data-anim="fade-up" data-delay="300">
+                        <div class="step-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.2">
+                                <rect x="8" y="28" width="32" height="12" rx="1"/><line x1="14" y1="28" x2="14" y2="16"/><line x1="34" y1="28" x2="34" y2="16"/>
+                                <line x1="14" y1="16" x2="34" y2="16"/>
+                            </svg>
+                        </div>
+                        <h3><span class="step-num">04.</span> Final Review</h3>
+                        <p>After completing project we conduct a thorough walkthrough with you to review the space.</p>
+                    </div>
+                </div>
+
+                <div class="brand-logos">
+                    <div class="brand-track">
+                        <div class="brand-item">Logoipsum</div>
+                        <div class="brand-item">Logoipsum</div>
+                        <div class="brand-item">Logoipsum</div>
+                        <div class="brand-item">Logoipsum</div>
+                        <div class="brand-item">Logoipsum</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TESTIMONIALS ========== -->
+        <section class="testimonials section-pad" id="testimonials">
+            <div class="container">
+                <div class="testi-grid">
+                    <div class="testi-image" data-anim="fade-right">
+                        <img src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&q=80&w=900" alt="Interior showcase">
+                    </div>
+                    <div class="testi-content" data-anim="fade-left">
+                        <span class="section-label"><span class="label-line"></span> Client Testimonials</span>
+                        <h2>Trusted by thousand of <span class="muted">people & companies.</span></h2>
+                        <div class="quote-mark">"</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <blockquote>I couldn't be happier with the transformation of my home! From our very first consultation, the team at took the time to understand my vision and preferences.</blockquote>
+
+                        <div class="testi-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=80&h=80" alt="Arlene McCoy">
+                            <div>
+                                <strong>Arlene McCoy</strong>
+                                <small>Co Founder</small>
+                            </div>
+                        </div>
+
+                        <div class="testi-stats">
+                            <span class="big-rating" data-count="4.82">0</span>
+                            <div>
+                                <div class="stars-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                                <span class="review-count">2,488 reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== BLOG ========== -->
+        <section class="blog section-pad bg-offwhite" id="blog">
+            <div class="arch-watermark"></div>
+            <div class="container">
+                <div class="section-header-flex">
+                    <div>
+                        <span class="section-label"><span class="label-line"></span> Latest News</span>
+                        <h2>Your guide to <span class="muted">inspired interiors</span></h2>
+                    </div>
+                    <p class="body-text section-desc">Your journey to inspired interiors begins here. Our blog offers a wealth of resources, including design tips, trend analyses.</p>
+                </div>
+
+                <div class="blog-grid">
+                    <article class="blog-card" data-anim="fade-up" data-cursor="Read">
+                        <div class="blog-thumb">
+                            <img src="furniture_blog_post_1775290081494.png" alt="Furniture Design">
+                            <span class="blog-date">Dec 15, 2024</span>
+                        </div>
+                        <div class="blog-body">
+                            <span class="blog-tag">Furniture</span>
+                            <h3><a href="blog.html">How Does One Go About a Buying Furniture?</a></h3>
+                            <a href="blog.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="blog-card" data-anim="fade-up" data-delay="150" data-cursor="Read">
+                        <div class="blog-thumb">
+                            <img src="decor_blog_post_1775290101917.png" alt="Interior Decor">
+                            <span class="blog-date">Nov 28, 2024</span>
+                        </div>
+                        <div class="blog-body">
+                            <span class="blog-tag">Decor</span>
+                            <h3><a href="blog.html">Innovative Decor Ideas Shaping Homes Today</a></h3>
+                            <a href="blog.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="blog-card" data-anim="fade-up" data-delay="300" data-cursor="Read">
+                        <div class="blog-thumb">
+                            <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=600" alt="Design Updates">
+                            <span class="blog-date">Oct 10, 2024</span>
+                        </div>
+                        <div class="blog-body">
+                            <span class="blog-tag">Industry</span>
+                            <h3><a href="blog.html">Design Industry Updates You Should Know About</a></h3>
+                            <a href="blog.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="center mt-60">
+                    <a href="blog.html" class="btn btn-dark">See All Blogs
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <a href="index.html" class="logo footer-logo">
+                    <svg class="logo-icon" width="38" height="38" viewBox="0 0 40 40" fill="none">
+                        <path d="M20 2L36 11V29L20 38L4 29V11L20 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <path d="M20 8L30 14V26L20 32L10 26V14L20 8Z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+                        <path d="M20 14L25 17.5V24.5L20 28L15 24.5V17.5L20 14Z" stroke="currentColor" stroke-width="1" fill="none"/>
+                    </svg>
+                    <span class="logo-text">divrag interior</span>
+                </a>
+                <div class="follow-socials">
+                    <span>Follow Our Socials</span>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-cols">
+                <div class="fcol">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="about.html">About Our Company</a></li>
+                        <li><a href="services.html">View Our Service</a></li>
+                        <li><a href="#">Careers At Company</a></li>
+                        <li><a href="blog.html">Read Our Blog</a></li>
+                        <li><a href="projects.html">Our Latest Projects</a></li>
+                    </ul>
+                </div>
+                <div class="fcol">
+                    <h4>Portfolio</h4>
+                    <ul>
+                        <li><a href="projects.html">Luxury Home Design</a></li>
+                        <li><a href="projects.html">Residential Interior Design</a></li>
+                        <li><a href="projects.html">Commercial Space Design</a></li>
+                        <li><a href="projects.html">Residential Interior Design</a></li>
+                        <li><a href="projects.html">Renovation And Restoration Design</a></li>
+                    </ul>
+                </div>
+                <div class="fcol">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact">
+                        <div class="fc-item"><i class="fas fa-phone-alt"></i><span>+1 (213) 465 789</span></div>
+                        <div class="fc-item"><i class="fas fa-envelope"></i><span>info@domain.com</span></div>
+                        <div class="fc-item"><i class="fas fa-map-marker-alt"></i><span>Generala Zietka Jerzego 54, Myslowice 41-412</span></div>
+                    </div>
+                </div>
+                <div class="fcol">
+                    <h4>Get The Latest Trending News</h4>
+                    <p class="newsletter-desc">Your Dream Space Starts Here Get Exclusive Design Straight Your Inbox!</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2024 All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
