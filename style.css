@@ -367,14 +367,18 @@ header.scrolled .hamburger span{background:var(--black)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 
 .img-collage{position:relative;padding-bottom:80px}
+.img-collage .wimg-wrap { height: auto; }
+.img-collage .wimg-wrap img { height: auto; object-fit: initial; }
+
 .collage-main{width:85%;border-radius:var(--radius);box-shadow:var(--shadow)}
 .collage-overlap{
-  width:55%;position:absolute;bottom:0;right:0;
-  border:8px solid var(--white);border-radius:var(--radius);
-  box-shadow:0 20px 40px rgba(0,0,0,.1);
+  width:60%;position:absolute;bottom:0;right:0;
+  border-radius:var(--radius);
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+  z-index: 2;
 }
 .exp-badge{
-  position:absolute;top:45%;right:28%;
+  position:absolute;bottom: 10%; right: 48%; /* Positioned like the screenshot */
   width:140px;height:140px;border-radius:50%;
   background:var(--accent);color:var(--white);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -413,10 +417,10 @@ header.scrolled .hamburger span{background:var(--black)}
 .accent-text{color:var(--accent)}
 
 .check-list{display:flex;flex-direction:column;gap:12px;margin:28px 0}
-.check-item{display:flex;align-items:center;gap:12px;font-weight:600;font-size:16px}
+.check-item{display:flex;align-items:center;gap:12px;font-weight:500;font-size:15.5px;color:var(--text)}
 
 .about-bottom{
-  display:flex;align-items:center;gap:30px;
+  display:flex;align-items:stretch;
   margin-top:40px;padding-top:30px;
   border-top:1px solid #eaeaea;
   flex-wrap:wrap;
@@ -458,14 +462,84 @@ header.scrolled .hamburger span{background:var(--black)}
 .feature-item p{font-size:15px;color:var(--text-light);line-height:1.6}
 
 /* Image Grid */
-.why-img-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+.why-img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
-.why-img-grid img{
-  border-radius:var(--radius);height:280px;object-fit:cover;width:100%;
-  transition:transform .5s;
+
+/* === DIAGONAL SPLIT REVEAL EFFECT (Reusable Wrap) === */
+.wimg-wrap {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 100%; /* Inherit height from parent/child */
 }
-.why-img-grid img:hover{transform:scale(1.03)}
+
+/* Specific height for the 'Why Choose Us' grid items */
+.why-img-grid .wimg-wrap {
+  height: 280px;
+}
+
+.wimg-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius);
+  transition: transform 2.0s cubic-bezier(0.1, 0.8, 0.2, 1),
+              filter 1.2s ease;
+  transform: scale(1);
+  filter: brightness(1);
+}
+
+/* The Dual Diagonal Sweep — Rectangles widening and moving apart from the center diagonal */
+.wimg-wrap::before, .wimg-wrap::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2;
+  pointer-events: none;
+  /* Both start as a thin line at the same 45deg diagonal */
+  transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 1.2s ease;
+  opacity: 0;
+}
+
+/* Before rectangle: Moves towards Top-Left and Left-Bottom area */
+.wimg-wrap::before {
+  transform: translate(-100%, -50%) rotate(-45deg) scaleX(0);
+  transform-origin: right center;
+}
+
+/* After rectangle: Moves towards Bottom-Right and Top-Right area */
+.wimg-wrap::after {
+  transform: translate(0%, -50%) rotate(-45deg) scaleX(0);
+  transform-origin: left center;
+}
+
+/* Hover: They increase in width and slide to their respective corners */
+.wimg-wrap:hover::before {
+  transform: translate(-150%, -100%) rotate(-45deg) scaleX(2);
+  opacity: 0.8;
+}
+
+.wimg-wrap:hover::after {
+  transform: translate(50%, 0%) rotate(-45deg) scaleX(2);
+  opacity: 0.8;
+}
+
+/* Phase 2: image pops up with slight zoom + brightness boost */
+.wimg-wrap:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
 
 /* ========================
    SERVICES
