@@ -234,26 +234,34 @@ h2 .muted{color:var(--text-light);font-style:italic}
    HEADER
    ======================== */
 header{
-  position:fixed;top:0;left:0;width:100%;z-index:999;
-  padding:22px 0;
+  position:absolute;top:0;left:0;width:100%;z-index:999;
+  padding:28px 0 0 0; /* Bottom padding handled by container for line alignment */
   transition:var(--transition);
 }
 header.scrolled{
-  background:var(--white);padding:14px 0;
+  background:var(--white);padding:14px 0 0 0;
   box-shadow:0 4px 20px rgba(0,0,0,.06);
 }
 header.scrolled .logo-text{color:var(--heading)}
-header.scrolled .logo-icon{color:var(--heading)}
+header.scrolled .logo-img{height:45px}
 header.scrolled .nav-links a{color:var(--text)}
 header.scrolled .nav-links a:hover,header.scrolled .nav-links a.active{color:var(--accent)}
 header.scrolled .hamburger span{background:var(--black)}
-
-.header-container{display:flex;align-items:center;justify-content:space-between}
+.header-container{
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.15); /* Aligned with logo and button */
+  padding-bottom: 20px; /* Space above line */
+}
+header.scrolled .header-container{
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 10px;
+}
 
 /* Logo */
-.logo{display:flex;align-items:center;gap:12px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-img{height:60px;width:auto;transition:var(--transition);filter: drop-shadow(0 2px 10px rgba(0,0,0,0.2))}
 .logo-icon{color:var(--white);transition:color .3s}
-.logo-text{font-size:24px;font-weight:700;color:var(--white);letter-spacing:.5px;transition:color .3s}
+.logo-text{font-size:24px;font-weight:700;color:var(--white);letter-spacing:-0.5px;transition:color .3s;font-family: 'Hanken Grotesk', sans-serif; text-transform: none;}
 
 /* Nav */
 .nav-links{display:flex;gap:36px;align-items:center}
@@ -878,4 +886,39 @@ blockquote{
   .about-bottom{flex-direction:column;align-items:flex-start}
   .about-bottom-right{flex-direction:column}
   .why-img-grid{grid-template-columns:1fr}
+}
+
+/* ========================
+   BRAND LOGOS MARQUEE
+   ======================== */
+.brand-logos {
+  overflow: hidden;
+  padding: 80px 0 20px;
+  position: relative;
+  background: transparent;
+}
+
+.brand-track {
+  display: flex;
+  width: calc(250px * 10); /* doubling based on your items */
+  animation: marquee 30s linear infinite;
+}
+
+.brand-item {
+  width: 250px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 5)); }
 }

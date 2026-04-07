@@ -97,12 +97,14 @@
   // ========================
   // STICKY HEADER
   // ========================
+  /* 
   const header = document.getElementById('header');
   if (header) {
     const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 80);
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
+  */
 
   // ========================
   // MOBILE NAV
