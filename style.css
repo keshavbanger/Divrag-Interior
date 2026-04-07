@@ -65,7 +65,7 @@ button{font-family:inherit}
 .label-line{display:inline-block;width:30px;height:1.5px;background:var(--accent)}
 
 /* ---- Section Header Flex ---- */
-.section-header-flex{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:50px}
+.section-header-flex{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;margin-bottom:50px}
 .section-header-flex h2{margin-bottom:0}
 .section-desc{max-width:460px;color:var(--text-light)}
 .section-header-flex.light .section-label{color:rgba(255,255,255,.6)}
