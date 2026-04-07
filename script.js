@@ -36,8 +36,7 @@
 
   // Hover Interactions
   const updateHovers = () => {
-    const interactive = 'a, button, input, textarea, .filter-btn, .play-circle, .hamburger';
-    const textTarget = 'h1, h2, h3, h4, h5, h6, p, .body-text, span, .logo-text, .nav-links a, .stat-num, .stat-label';
+    const interactive = 'a, button, .filter-btn, .play-circle, .hamburger';
     const imgTarget = 'img, .project-img-wrap, .blog-thumb, .services-imgs, .testi-image';
 
     document.addEventListener('mouseover', e => {
@@ -59,17 +58,11 @@
         return;
       }
 
-      // 3. Text Hover Dynamic Sizing (Matte Black Effect)
-      const text = t.closest(textTarget) || (t.tagName === 'A' ? t : null);
-      if (text) {
+      // 3. Link Hover (Standard Premium)
+      if (t.closest('a') || t.closest('.filter-btn')) {
         cursor.classList.add('-text-hover');
-        const style = window.getComputedStyle(text);
-        const fs = parseInt(style.fontSize);
-        let size = fs * 1.3; // Reduced from 2.2 for a more subtle frame
-        if (size > 80) size = 80; // Cap large sizes (headings)
-        if (size < 30) size = 30; // Min size for body text
-        cursor.style.width = size + 'px';
-        cursor.style.height = size + 'px';
+        cursor.style.width = '60px'; // Consistent size for links
+        cursor.style.height = '60px';
         cursor.style.backgroundColor = 'white';
         cursor.style.mixBlendMode = 'difference';
       }
@@ -83,7 +76,7 @@
         cursorText.innerText = '';
         cursor.style.mixBlendMode = 'exclusion';
       }
-      if (t.closest(textTarget) || t.tagName === 'A') {
+      if (t.closest('a') || t.closest('.filter-btn')) {
         cursor.classList.remove('-text-hover');
         cursor.style.width = '';
         cursor.style.height = '';
