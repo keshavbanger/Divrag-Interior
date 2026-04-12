@@ -51,23 +51,28 @@
 
       // 2. Image View Label
       const img = t.closest(imgTarget);
-      if (img) {
+      // Suppress 'View Image' if inside a link (redirecting page) or if explicitly disabled
+      const isClickableCard = t.closest('.blog-card, .project-card, a');
+      if (img && !isClickableCard) {
         cursor.classList.add('-image-hover');
         cursor.style.mixBlendMode = 'normal';
         cursor.style.backgroundColor = 'var(--white)';
         cursorText.innerText = 'View Image';
         return;
+      } else if (img && isClickableCard) {
+        cursor.classList.remove('-image-hover');
+        cursorText.innerText = '';
       }
 
-      // 3. Text Hover Dynamic Sizing (Matte Black Effect)
+      // 3. Text Hover Dynamic Sizing
       const text = t.closest(textTarget) || (t.tagName === 'A' ? t : null);
       if (text) {
         cursor.classList.add('-text-hover');
         const style = window.getComputedStyle(text);
         const fs = parseInt(style.fontSize);
-        let size = fs * 1.3; // Reduced from 2.2 for a more subtle frame
-        if (size > 80) size = 80; // Cap large sizes (headings)
-        if (size < 30) size = 30; // Min size for body text
+        let size = fs * 1.5; 
+        if (size > 60) size = 60; // Cap at 60px to prevent huge circles
+        if (size < 25) size = 25; // Min size
         cursor.style.width = size + 'px';
         cursor.style.height = size + 'px';
         cursor.style.backgroundColor = 'white';
@@ -280,34 +285,51 @@
   }
 
   // ========================
-  // TEXT SPLIT REVEAL ANIMATION
+  // TEXT SPLIT REVEAL ANIMATION (PRESERVE HTML & SPACES)
+  // ========================
+  // ========================
+  // TEXT SPLIT REVEAL ANIMATION (PRO-LEVEL HTML HANDLING)
   // ========================
   const splitElements = document.querySelectorAll('.text-split-ani');
   
   splitElements.forEach(el => {
-    const text = el.textContent.trim();
-    if (!text) return;
+    const originalHTML = el.innerHTML;
+    if (!originalHTML.trim()) return;
 
     el.innerHTML = '';
     
-    // Split into words and characters
-    const words = text.split(/\s+/);
-    words.forEach((word, wordIdx) => {
-      const wordSpan = document.createElement('span');
-      wordSpan.className = 'word';
-      wordSpan.style.display = 'inline-block';
-      wordSpan.style.whiteSpace = 'nowrap';
-      
-      word.split('').forEach(char => {
-        const charSpan = document.createElement('span');
-        charSpan.className = 'char';
-        charSpan.innerText = char;
-        wordSpan.appendChild(charSpan);
-      });
-      
-      el.appendChild(wordSpan);
-      if (wordIdx < words.length - 1) {
-        el.appendChild(document.createTextNode(' '));
+    // Split into tokens (tags or words/spaces)
+    const tokens = originalHTML.split(/(<[^>]*>)/g);
+    
+    tokens.forEach(token => {
+      if (token.startsWith('<')) {
+        // It's a tag (like <br> or <span>), append it directly as HTML
+        const temp = document.createElement('div');
+        temp.innerHTML = token;
+        while (temp.firstChild) {
+          el.appendChild(temp.firstChild);
+        }
+      } else {
+        // It's text, split into words and spaces
+        const parts = token.split(/(\s+)/g);
+        parts.forEach(part => {
+          if (part.trim() === '') {
+            el.appendChild(document.createTextNode(part));
+          } else {
+            const wordSpan = document.createElement('span');
+            wordSpan.className = 'word';
+            wordSpan.style.display = 'inline-block';
+            wordSpan.style.whiteSpace = 'nowrap';
+            
+            part.split('').forEach(char => {
+              const charSpan = document.createElement('span');
+              charSpan.className = 'char';
+              charSpan.innerText = char;
+              wordSpan.appendChild(charSpan);
+            });
+            el.appendChild(wordSpan);
+          }
+        });
       }
     });
 
@@ -340,18 +362,107 @@
   });
 
   // ========================
-  // REVEAL UP ANIMATION (Buttons & Sections)
+  // SCROLL REVEAL ANIMATIONS (GLOBAL)
   // ========================
-  const revealUpElements = document.querySelectorAll('.reveal-up');
-  const revealObserver = new IntersectionObserver((entries) => {
+  const revealItems = document.querySelectorAll('[data-anim], .reveal-up, .reveal-down');
+  
+  const globalRevealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        // Handle both class-based and data-attr based reveals
+        entry.target.classList.add('revealed');
         entry.target.classList.add('animated');
-        revealObserver.unobserve(entry.target);
+        globalRevealObserver.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1 });
   
-  revealUpElements.forEach(el => revealObserver.observe(el));
+  revealItems.forEach(el => {
+    // Immediate check for elements in viewport
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('revealed');
+      el.classList.add('animated');
+    } else {
+      globalRevealObserver.observe(el);
+    }
+  });
+
+  // ========================
+  // REVEAL UP CSS CLASSES ENFORCEMENT
+  // ========================
+  // Ensuring class-based reveals have initial state in CSS if not handled by data-anim
+
+  // ========================
+  // LIGHTBOX LOGIC
+  // ========================
+  const lightbox = document.createElement('div');
+  lightbox.className = 'cb-lightbox';
+  lightbox.innerHTML = `
+    <div class="cb-lightbox-content">
+      <button class="cb-lightbox-close"><i class="fas fa-times"></i></button>
+      <img src="" alt="Full View" class="cb-lightbox-img">
+    </div>
+  `;
+  document.body.appendChild(lightbox);
+
+  const lbImg = lightbox.querySelector('.cb-lightbox-img');
+  const lbClose = lightbox.querySelector('.cb-lightbox-close');
+
+  const openLightbox = (src) => {
+    lbImg.src = src;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    // Keeping custom cursor visible as per user request
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+    cursor.classList.remove('-hidden');
+    setTimeout(() => { lbImg.src = ''; }, 500);
+  };
+
+  document.addEventListener('click', e => {
+    const t = e.target;
+    const imgTarget = 'img, .project-img-wrap, .blog-thumb, .services-imgs, .testi-image, .project-card, .service-card, .blog-card';
+    const container = t.closest(imgTarget);
+    
+    if (container) {
+      // If it's a link or button, don't open lightbox (e.g. "Read More" or "View Project" links)
+      if (t.closest('a, button:not(.cb-lightbox-close)')) return;
+
+      let src = '';
+      if (container.tagName === 'IMG') {
+        src = container.src;
+      } else {
+        const nestedImg = container.querySelector('img');
+        if (nestedImg) src = nestedImg.src;
+      }
+      
+      // Fallback for background images
+      if (!src) {
+        const style = window.getComputedStyle(container);
+        const bg = style.backgroundImage;
+        if (bg && bg !== 'none') {
+          src = bg.slice(5, -2).replace(/"/g, ''); 
+        }
+      }
+
+      if (src && !src.includes('data:image')) {
+        openLightbox(src);
+      }
+    }
+  });
+
+  lbClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+  });
 
 })();

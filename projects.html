@@ -10,7 +10,7 @@
 </head>
 <body>
 
-        <header id="header">
+    <header id="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <img src="logo.png" alt="Divrag Interior Logo" class="logo-img"><span class="logo-text">Divrag Interiors</span>
@@ -21,47 +21,87 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
             <div class="header-right">
                 <a href="contact.html" class="btn btn-accent btn-sm">Get In Touch <i class="fas fa-arrow-right"></i></a>
-                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                    <span></span><span></span><span></span>
-                </button>
             </div>
         </div>
     </header>
-    <div class="mobile-nav-overlay" id="mobileNav"><div class="mobile-nav-content"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div></div>
 
-    <section class="page-banner"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1920" alt="Projects"><div class="banner-overlay"></div><div class="container"><div class="banner-content"><h1>Our Projects</h1><div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Projects</span></div></div></div></section>
+    <section class="page-banner">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1920" alt="Projects">
+        <div class="banner-overlay"></div>
+        <div class="container">
+            <div class="banner-content">
+                <h1>Our Projects</h1>
+                <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Projects</span></div>
+            </div>
+        </div>
+    </section>
 
     <main>
         <section class="projects section-pad">
             <div class="container">
                 <div class="filter-tabs">
                     <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="architecture">Architecture</button>
                     <button class="filter-btn" data-filter="interior">Interior</button>
-                    <button class="filter-btn" data-filter="bedroom">Bedroom</button>
-                    <button class="filter-btn" data-filter="furniture">Furniture</button>
-                    <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+                    <button class="filter-btn" data-filter="architecture">Architecture</button>
                 </div>
                 <div class="projects-grid">
-                    <div class="project-card" data-cat="interior" data-anim="fade-up"><div class="project-img-wrap"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Corporate Office"></div><div class="project-info-bar"><div><span class="project-cat">Corporate Office</span><h4>45,000 sq.ft. Turnkey Execution - Pune</h4></div><a href="#" class="arrow-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div></div>
-                    <div class="project-card" data-cat="architecture" data-anim="fade-up" data-delay="150"><div class="project-img-wrap"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Luxury Villa"></div><div class="project-info-bar"><div><span class="project-cat">Luxury Villa</span><h4>8,500 sq.ft. Complete Interior Design - Mumbai</h4></div><a href="#" class="arrow-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div></div>
-                    <div class="project-card" data-cat="interior" data-anim="fade-up"><div class="project-img-wrap"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" alt="Retail Showroom"></div><div class="project-info-bar"><div><span class="project-cat">Retail Showroom</span><h4>12,000 sq.ft. Design + Execution - Bengaluru</h4></div><a href="#" class="arrow-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div></div>
-                    <div class="project-card" data-cat="architecture" data-anim="fade-up" data-delay="150"><div class="project-img-wrap"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" alt="Restaurant & Cafe"></div><div class="project-info-bar"><div><span class="project-cat">Restaurant & Café</span><h4>6,500 sq.ft. Turnkey Project - Delhi</h4></div><a href="#" class="arrow-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a></div></div>
+                    <a href="turnkey-pune.html" class="project-card" data-cat="interior" data-anim="fade-up">
+                        <div class="project-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800" alt="Corporate Office">
+                            <div class="arrow-center"><i class="fas fa-arrow-up-right-from-square" style="transform: rotate(45deg);"></i></div>
+                        </div>
+                        <div class="project-info-bar">
+                            <span class="project-cat">Corporate Office</span>
+                            <h4>45,000 sq.ft. Turnkey Execution - Pune</h4>
+                        </div>
+                    </a>
+                    <a href="interior-mumbai.html" class="project-card" data-cat="architecture" data-anim="fade-up" data-delay="150">
+                        <div class="project-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="Luxury Villa">
+                            <div class="arrow-center"><i class="fas fa-arrow-up-right-from-square" style="transform: rotate(45deg);"></i></div>
+                        </div>
+                        <div class="project-info-bar">
+                            <span class="project-cat">Luxury Villa</span>
+                            <h4>8,500 sq.ft. Complete Interior Design - Mumbai</h4>
+                        </div>
+                    </a>
+                    <a href="retail-bengaluru.html" class="project-card" data-cat="interior" data-anim="fade-up">
+                        <div class="project-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" alt="Retail Showroom">
+                            <div class="arrow-center"><i class="fas fa-arrow-up-right-from-square" style="transform: rotate(45deg);"></i></div>
+                        </div>
+                        <div class="project-info-bar">
+                            <span class="project-cat">Retail Showroom</span>
+                            <h4>12,000 sq.ft. Design + Execution - Bengaluru</h4>
+                        </div>
+                    </a>
+                    <a href="restaurant-delhi.html" class="project-card" data-cat="architecture" data-anim="fade-up" data-delay="150">
+                        <div class="project-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" alt="Restaurant & Cafe">
+                            <div class="arrow-center"><i class="fas fa-arrow-up-right-from-square" style="transform: rotate(45deg);"></i></div>
+                        </div>
+                        <div class="project-info-bar">
+                            <span class="project-cat">Restaurant & Café</span>
+                            <h4>6,500 sq.ft. Turnkey Project - Delhi</h4>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer"><div class="container"><div class="footer-top"><a href="index.html" class="logo footer-logo"><img src="logo.png" alt="Divrag Interior Logo" class="logo-img"><span class="logo-text">Divrag Interiors</span></a><div class="follow-socials"><span>Follow Our Socials</span><div class="social-icons"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-dribbble"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div></div></div><div class="footer-bottom"><p>Copyright &copy; 2024 All Rights Reserved.</p></div></div></footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom"><p>Copyright &copy; 2024 All Rights Reserved.</p></div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
-
-
