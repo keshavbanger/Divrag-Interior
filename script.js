@@ -51,13 +51,18 @@
 
       // 2. Image View Label
       const img = t.closest(imgTarget);
-      // Suppress 'View Image' if inside a link (redirecting page) or if explicitly disabled
       const isClickableCard = t.closest('.blog-card, .project-card, a');
       if (img && !isClickableCard) {
         cursor.classList.add('-image-hover');
+        cursor.style.width = '120px';
+        cursor.style.height = '120px';
+        cursor.style.backgroundColor = 'white';
         cursor.style.mixBlendMode = 'normal';
-        cursor.style.backgroundColor = 'var(--white)';
-        cursorText.innerText = 'View Image';
+        cursorText.innerText = 'VIEW IMAGE';
+        cursorText.style.color = 'black';
+        cursorText.style.fontSize = '12px';
+        cursorText.style.fontWeight = '700';
+        cursorText.style.letterSpacing = '1px';
         return;
       } else if (img && isClickableCard) {
         cursor.classList.remove('-image-hover');
