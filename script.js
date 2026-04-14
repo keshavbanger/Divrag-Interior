@@ -49,22 +49,10 @@
         return;
       }
 
-      // 2. Image View Label
+      // 2. Image hover — no label
       const img = t.closest(imgTarget);
       const isClickableCard = t.closest('.blog-card, .project-card, a');
-      if (img && !isClickableCard) {
-        cursor.classList.add('-image-hover');
-        cursor.style.width = '120px';
-        cursor.style.height = '120px';
-        cursor.style.backgroundColor = 'white';
-        cursor.style.mixBlendMode = 'normal';
-        cursorText.innerText = 'VIEW IMAGE';
-        cursorText.style.color = 'black';
-        cursorText.style.fontSize = '12px';
-        cursorText.style.fontWeight = '700';
-        cursorText.style.letterSpacing = '1px';
-        return;
-      } else if (img && isClickableCard) {
+      if (img) {
         cursor.classList.remove('-image-hover');
         cursorText.innerText = '';
       }
@@ -398,76 +386,6 @@
   // ========================
   // Ensuring class-based reveals have initial state in CSS if not handled by data-anim
 
-  // ========================
-  // LIGHTBOX LOGIC
-  // ========================
-  const lightbox = document.createElement('div');
-  lightbox.className = 'cb-lightbox';
-  lightbox.innerHTML = `
-    <div class="cb-lightbox-content">
-      <button class="cb-lightbox-close"><i class="fas fa-times"></i></button>
-      <img src="" alt="Full View" class="cb-lightbox-img">
-    </div>
-  `;
-  document.body.appendChild(lightbox);
 
-  const lbImg = lightbox.querySelector('.cb-lightbox-img');
-  const lbClose = lightbox.querySelector('.cb-lightbox-close');
-
-  const openLightbox = (src) => {
-    lbImg.src = src;
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    // Keeping custom cursor visible as per user request
-  };
-
-  const closeLightbox = () => {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
-    cursor.classList.remove('-hidden');
-    setTimeout(() => { lbImg.src = ''; }, 500);
-  };
-
-  document.addEventListener('click', e => {
-    const t = e.target;
-    const imgTarget = 'img, .project-img-wrap, .blog-thumb, .services-imgs, .testi-image, .project-card, .service-card, .blog-card';
-    const container = t.closest(imgTarget);
-    
-    if (container) {
-      // If it's a link or button, don't open lightbox (e.g. "Read More" or "View Project" links)
-      if (t.closest('a, button:not(.cb-lightbox-close)')) return;
-
-      let src = '';
-      if (container.tagName === 'IMG') {
-        src = container.src;
-      } else {
-        const nestedImg = container.querySelector('img');
-        if (nestedImg) src = nestedImg.src;
-      }
-      
-      // Fallback for background images
-      if (!src) {
-        const style = window.getComputedStyle(container);
-        const bg = style.backgroundImage;
-        if (bg && bg !== 'none') {
-          src = bg.slice(5, -2).replace(/"/g, ''); 
-        }
-      }
-
-      if (src && !src.includes('data:image')) {
-        openLightbox(src);
-      }
-    }
-  });
-
-  lbClose.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  // Close on Escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
-  });
 
 })();

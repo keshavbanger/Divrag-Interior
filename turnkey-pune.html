@@ -32,9 +32,14 @@
             </nav>
             <div class="header-right">
                 <a href="contact.html" class="btn btn-accent btn-sm">Get In Touch <i class="fas fa-arrow-right"></i></a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </header>
+
+    <div class="mobile-nav-overlay" id="mobileNav"><div class="mobile-nav-content"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div></div>
 
     <!-- Project Banner -->
     <section class="page-banner">
@@ -117,7 +122,9 @@
 
                     <!-- Main Content -->
                     <div class="details-main">
-                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200" alt="Featured Image" class="main-img" data-anim="fade-up">
+                        <div class="gallery-item main-img-wrap" data-anim="fade-up">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200" alt="Featured Image" class="main-img">
+                        </div>
                         
                         <div class="details-body" data-anim="fade-up">
                             <h2>Project information</h2>

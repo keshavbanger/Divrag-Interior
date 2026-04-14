@@ -89,22 +89,15 @@
                         </div>
 
                         <div class="help-card">
-                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=400" alt="Help" class="help-img">
+                            <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&q=80&w=400" alt="Curated For You" class="help-img">
                             <div class="help-content">
-                                <h3>How Can We Help</h3>
-                                <p>If you need any help, please feel free to contact us anytime. Our team is ready to assist you.</p>
+                                <h3>Curated For You</h3>
+                                <p>Finding the right pieces can be overwhelming. Let our curators find the perfect fit for your home.</p>
                                 <div class="help-contact-item">
                                     <div class="icon"><i class="fas fa-phone-alt"></i></div>
                                     <div>
-                                        <small>Call Us</small>
-                                        <strong>+91 1234567890</strong>
-                                    </div>
-                                </div>
-                                <div class="help-contact-item">
-                                    <div class="icon"><i class="fas fa-envelope"></i></div>
-                                    <div>
-                                        <small>Email Us</small>
-                                        <strong>info@domain.com</strong>
+                                        <small>Consult Now</small>
+                                        <strong>+91 81090 35253</strong>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +106,9 @@
 
                     <!-- Main Content -->
                     <div class="details-main">
-                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200" alt="Residential Interior" class="main-img" data-anim="fade-up">
+                        <div class="gallery-item main-img-wrap" data-anim="fade-up">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200" alt="Residential Interior" class="main-img">
+                        </div>
                         
                         <div data-anim="fade-up">
                             <p class="body-text">Our interior design services are crafted to transform spaces through thoughtful planning, custom furniture, and tailored layouts. We believe that every room should have an efficient flow and a balanced design, so our space planning and layout services aim to optimize each area to fit seamlessly with your lifestyle. With custom furniture design, we create unique pieces that not only enhance the space but reflect your personal style.</p>
@@ -122,7 +117,9 @@
                         </div>
 
                         <div class="feature-grid">
-                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=600" alt="Feature" class="feature-img" data-anim="fade-right">
+                            <div class="gallery-item feature-img-wrap" data-anim="fade-right">
+                                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=600" alt="Feature" class="feature-img">
+                            </div>
                             <ul class="check-list-v2" data-anim="fade-left">
                                 <li class="check-item-v2"><i class="fas fa-check"></i> Excellence In Creative Design Expertise</li>
                                 <li class="check-item-v2"><i class="fas fa-check"></i> Mastering The Art Of Creative Design Excellence</li>
@@ -202,55 +199,79 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="container">
-            <div class="footer-top">
-                <a href="index.html" class="logo footer-logo">
-                    <img src="logo.png" alt="Divrag Interior Logo" class="logo-img"><span class="logo-text">Divrag Interiors</span>
-                </a>
-                <div class="follow-socials">
-                    <span>Follow Our Socials</span>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <!-- Footer Top Row -->
+            <div class="footer-top-row">
+                <div class="footer-logo-block">
+                    <div class="logo-circ"><img src="logo.png" alt="Divrag Interiors Logo"></div>
+                    <span class="logo-text">Divrag Interiors</span>
+                </div>
+                <div class="footer-top-divider"></div>
+                <div class="footer-top-desc">
+                    <p>Absolutely. We can incorporate your existing furniture, décors, and layout preferences into the new design to maintain continuity and budget efficiency.</p>
+                </div>
+                <div class="footer-social-circles">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-main-grid">
+                <!-- Newsletter Column -->
+                <div class="f-column newsletter-col">
+                    <h3>Subscribe for Architecture & Interior Updates</h3>
+                    <p>Absolutely. We can incorporate your existing furniture, décor, and layout preferences into the new design</p>
+                    <div class="f-subscribe-wrap">
+                        <input type="email" placeholder="Enter Email Address*">
+                        <button class="f-sub-btn"><i class="fas fa-arrow-up-right-from-square" style="transform: rotate(45deg);"></i></button>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="f-column">
+                    <h4>Quick Links</h4>
+                    <ul class="f-list-star">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="projects.html">Our Projects</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div class="f-column">
+                    <h4>Our Services</h4>
+                    <ul class="f-list-star">
+                        <li><a href="3d-visualization.html">3D Visualization</a></li>
+                        <li><a href="services.html">Architectural Planning</a></li>
+                        <li><a href="residential-design.html">Residential Interior Design</a></li>
+                        <li><a href="commercial-design.html">Commercial Interior Design</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get In Touch -->
+                <div class="f-column">
+                    <h4>Get In Touch</h4>
+                    <div class="f-contact-item">
+                        <div class="f-contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="f-contact-info">
+                            <strong>E-mail Us</strong>
+                            <span>divraginteriors@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="f-contact-item">
+                        <div class="f-contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="f-contact-info">
+                            <strong>Urgent Inquiries</strong>
+                            <span>+91 81090 35253</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-cols">
-                <div class="fcol">
-                    <h4>Information</h4>
-                    <ul>
-                        <li><a href="about.html">About Our Company</a></li>
-                        <li><a href="services.html">View Our Service</a></li>
-                        <li><a href="blog.html">Read Our Blog</a></li>
-                        <li><a href="projects.html">Our Latest Projects</a></li>
-                    </ul>
-                </div>
-                <div class="fcol">
-                    <h4>Portfolio</h4>
-                    <ul>
-                        <li><a href="projects.html">Luxury Home Design</a></li>
-                        <li><a href="projects.html">Residential Interior</a></li>
-                        <li><a href="projects.html">Commercial Space</a></li>
-                    </ul>
-                </div>
-                <div class="fcol">
-                    <h4>Contact Us</h4>
-                    <div class="footer-contact">
-                        <div class="fc-item"><i class="fas fa-phone-alt"></i><span>+91 81090 35253</span></div>
-                        <div class="fc-item"><i class="fas fa-envelope"></i><span>divraginteriors@gmail.com</span></div>
-                    </div>
-                </div>
-                <div class="fcol">
-                    <h4>Newsletter</h4>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-bottom">
+
+            <div class="footer-bottom-bar">
                 <p>Copyright &copy; 2024 All Rights Reserved.</p>
             </div>
         </div>

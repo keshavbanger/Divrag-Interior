@@ -25,16 +25,20 @@
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="projects.html">Projects</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
             <div class="header-right">
                 <a href="contact.html" class="btn btn-accent btn-sm">Get In Touch <i class="fas fa-arrow-right"></i></a>
-                <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </header>
+
+    <div class="mobile-nav-overlay" id="mobileNav"><div class="mobile-nav-content"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="projects.html">Projects</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul></div></div>
 
     <main>
         <section class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=1920');">
@@ -49,7 +53,7 @@
         <section class="section-pad">
             <div class="container">
                 <div class="blog-detail-content">
-                    <div class="blog-main-img" data-anim="fade-in">
+                    <div class="gallery-item blog-main-img" data-anim="fade-in">
                         <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&q=80&w=1200" alt="Furniture Guide">
                     </div>
                     <div class="blog-article-body" data-anim="fade-up">
@@ -82,12 +86,78 @@
 
     <footer class="footer" id="footer">
         <div class="container">
+            <!-- Footer Top Row -->
             <div class="footer-top-row">
                 <div class="footer-logo-block">
-                    <div class="logo-circ"><img src="logo.png" alt="Logo"></div>
+                    <div class="logo-circ"><img src="logo.png" alt="Divrag Interiors Logo"></div>
                     <span class="logo-text">Divrag Interiors</span>
                 </div>
-                <div class="footer-bottom-bar"><p>Copyright &copy; 2024 All Rights Reserved.</p></div>
+                <div class="footer-top-divider"></div>
+                <div class="footer-top-desc">
+                    <p>Absolutely. We can incorporate your existing furniture, décors, and layout preferences into the new design to maintain continuity and budget efficiency.</p>
+                </div>
+                <div class="footer-social-circles">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-main-grid">
+                <!-- Newsletter Column -->
+                <div class="f-column newsletter-col">
+                    <h3>Subscribe for Architecture & Interior Updates</h3>
+                    <p>Absolutely. We can incorporate your existing furniture, décor, and layout preferences into the new design</p>
+                    <div class="f-subscribe-wrap">
+                        <input type="email" placeholder="Enter Email Address*">
+                        <button class="f-sub-btn"><i class="fas fa-arrow-up-right-from-square" style="transform: rotate(45deg);"></i></button>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="f-column">
+                    <h4>Quick Links</h4>
+                    <ul class="f-list-star">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="projects.html">Our Projects</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Services -->
+                <div class="f-column">
+                    <h4>Our Services</h4>
+                    <ul class="f-list-star">
+                        <li><a href="3d-visualization.html">3D Visualization</a></li>
+                        <li><a href="services.html">Architectural Planning</a></li>
+                        <li><a href="residential-design.html">Residential Interior Design</a></li>
+                        <li><a href="commercial-design.html">Commercial Interior Design</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get In Touch -->
+                <div class="f-column">
+                    <h4>Get In Touch</h4>
+                    <div class="f-contact-item">
+                        <div class="f-contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="f-contact-info">
+                            <strong>E-mail Us</strong>
+                            <span>divraginteriors@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="f-contact-item">
+                        <div class="f-contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="f-contact-info">
+                            <strong>Urgent Inquiries</strong>
+                            <span>+91 81090 35253</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <p>Copyright &copy; 2024 All Rights Reserved.</p>
             </div>
         </div>
     </footer>
